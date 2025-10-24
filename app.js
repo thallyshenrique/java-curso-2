@@ -27,16 +27,16 @@ function verificarChute() {
     }
 
     if (Number(chute) === numeroSecreto) {
-        exibirTextoNaTela('#titulo', '🎉 Acertou!');
+        exibirTextoNaTela('#titulo', 'Acertou!');
         const palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         const mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
         exibirTextoNaTela('#mensagem', mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
         if (chute > numeroSecreto) {
-            exibirTextoNaTela('#mensagem', 'O número secreto é menor 👇');
+            exibirTextoNaTela('#mensagem', 'O número secreto é menor ');
         } else {
-            exibirTextoNaTela('#mensagem', 'O número secreto é maior 👆');
+            exibirTextoNaTela('#mensagem', 'O número secreto é maior ');
         }
         tentativas++;
         limparCampo();
